@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,12 +28,15 @@ public class AlumnoREST {
     
     @GetMapping("/{id}")
     public Alumnos buscarAlumnos(@PathVariable int id){
-        
         return repo.buscar(id);
     }    
     @DeleteMapping("/{id}")
     public void desactivarAlumno(@PathVariable int id){
        repo.desactivar(id);
+    }
+    @PutMapping
+    public void actualizarAlumno(@RequestBody Alumnos alumno){
+     repo.actualizar(alumno);
     }
 
    /*  @GetMapping

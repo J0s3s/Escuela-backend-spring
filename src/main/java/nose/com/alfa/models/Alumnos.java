@@ -8,6 +8,7 @@ public class Alumnos {
     private String nocontrol;
     private byte activo;
     private Date deleted;
+    
     public byte getActivo() {
         return activo;
     }
