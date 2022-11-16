@@ -34,4 +34,12 @@ public class AlumnoJDBC {
         String sql="UPDATE alumnos SET nombre=?,nocontrol=?, updated=NOW() WHERE id=?;";
         conexion.update(sql,alumno.getNombre(),alumno.getNocontrol(),alumno.getId());
     }
+
+    public void insertar(Alumnos alumno) {
+        String sql="INSERT INTO alumnos(nombre,nocontrol) VALUES (?,?);";
+        conexion.update(sql,alumno.getNombre(),alumno.getNocontrol());
+    }
+
+   
+
 }

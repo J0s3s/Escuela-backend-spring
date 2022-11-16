@@ -1,13 +1,11 @@
 package nose.com.alfa.models;
 
-import java.util.Date;
-
 public class Alumnos {
     private byte id;
     private String nombre;
     private String nocontrol;
     private byte activo;
-    private Date deleted;
+    private String deleted;
     
     public byte getActivo() {
         return activo;
@@ -15,10 +13,10 @@ public class Alumnos {
     public void setActivo(byte activo) {
         this.activo = activo;
     }
-    public Date getDeleted() {
+    public String getDeleted() {
         return deleted;
     }
-    public void setDeleted(Date deleted) {
+    public void setDeleted(String deleted) {
         this.deleted = deleted;
     }
     public byte getId() {
