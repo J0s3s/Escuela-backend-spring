@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import nose.com.alfa.dao.CalificacionJDBC;
+import nose.com.alfa.models.CalifMat;
 import nose.com.alfa.models.Calificaciones;
-import nose.com.alfa.models.Materias;
 
 @RestController
 @RequestMapping("/calificacion")
@@ -24,7 +24,7 @@ public class CalificacionREST {
 
 
     @GetMapping("/{id}")
-    public List<Calificaciones> consultarCalificaciones (@PathVariable int id){
+    public List<CalifMat> consultarCalificaciones (@PathVariable int id){
      return repo.consultarCaf(id);
     }
     
